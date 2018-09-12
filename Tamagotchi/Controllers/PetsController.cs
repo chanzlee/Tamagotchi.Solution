@@ -41,7 +41,9 @@ namespace Tamagotchi.Controllers
       if (newPet.GetAttention() == 0 || newPet.GetHunger()==100 || newPet.GetSleep()==0)
       {
         newPet.SetDeath(true);
+        return View("Death", newPet);
       }
+    
       return View("Details", newPet);
     }
     [HttpPost("/place/delete")]
