@@ -1,0 +1,13 @@
+<h1>Pet Specific Details</h1>
+
+<ul>
+  <li>Sleep: @Model.GetSleep()</li>
+  <li>Hunger: @Model.GetHunger()</li>
+  <li>Attention: @Model.GetAttention()</li>
+  <li>Dead?: @Model.GetDeath()</li>
+</ul>
+
+<form action="/pets/@Model.GetId()" method="post">
+  <button type="submit">Longevity</button>
+</form>
+<a href="/pets">Go back to the pet</a>
